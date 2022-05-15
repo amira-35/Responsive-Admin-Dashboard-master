@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/constants/constants.dart';
 import 'package:responsive_admin_dashboard/screens/components/drawer_list_tile.dart';
-import 'package:responsive_admin_dashboard/screens/dashborad/licenses.dart';
+
 import 'package:responsive_admin_dashboard/screens/dashborad/servers.dart';
 import 'package:responsive_admin_dashboard/screens/dashborad/statistics.dart';
 import 'package:responsive_admin_dashboard/screens/dashborad/summaryTable.dart';
@@ -36,15 +36,6 @@ class DrawerMenu extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Servers()),
-                );
-              }),
-          DrawerListTile(
-              title: 'Licenses',
-              svgSrc: 'assets/icons/Pages.svg',
-              tap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Licenses()),
                 );
               }),
           DrawerListTile(
