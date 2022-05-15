@@ -10,10 +10,17 @@ class ProfileInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        /*Padding(
+        Padding(
           padding: const EdgeInsets.all(appPadding),
           child: Stack(
             children: [
+              /*IconButton(
+               onPressed: context.read<Controller>().controlMenu ,
+               icon: Icon(
+              Icons.menu,
+              color: textColor.withOpacity(0.5),
+               ),
+          ),*/
               SvgPicture.asset(
                 "assets/icons/Bell.svg",
                 height: 25,
@@ -32,7 +39,7 @@ class ProfileInfo extends StatelessWidget {
               )
             ],
           ),
-        ),*/
+        ),
         Container(
           margin: EdgeInsets.only(left: appPadding),
           padding: EdgeInsets.symmetric(

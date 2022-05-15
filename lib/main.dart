@@ -1,8 +1,11 @@
-
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:responsive_admin_dashboard/constants/constants.dart';
 import 'package:responsive_admin_dashboard/controllers/controller.dart';
-import 'package:responsive_admin_dashboard/screens/dash_board_screen.dart';
+import 'package:responsive_admin_dashboard/screens/dashborad/dash_board_screen.dart';
+import 'package:responsive_admin_dashboard/screens/home_view.dart';
+import 'package:responsive_admin_dashboard/screens/login/homedesktop.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,19 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Responsive Admin Dashboard',
+      title: 'Statistic App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (context) => Controller(),
-          )
-        ],
-        child: DashBoardScreen(),
-      ),
+      home: HomeView(),
     );
   }
 }

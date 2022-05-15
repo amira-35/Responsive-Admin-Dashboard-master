@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/constants/constants.dart';
 import 'package:responsive_admin_dashboard/screens/components/drawer_list_tile.dart';
-import 'package:responsive_admin_dashboard/screens/homeScreen.dart';
-import 'package:responsive_admin_dashboard/screens/users.dart';
+import 'package:responsive_admin_dashboard/screens/dashborad/licenses.dart';
+import 'package:responsive_admin_dashboard/screens/dashborad/servers.dart';
+import 'package:responsive_admin_dashboard/screens/dashborad/statistics.dart';
+import 'package:responsive_admin_dashboard/screens/dashborad/summaryTable.dart';
+import 'package:responsive_admin_dashboard/screens/dashborad/users.dart';
 
 class DrawerMenu extends StatelessWidget {
   const DrawerMenu({Key? key}) : super(key: key);
@@ -16,30 +19,43 @@ class DrawerMenu extends StatelessWidget {
               padding: EdgeInsets.all(appPadding),
               child: Container(
                   alignment: Alignment.topCenter,
-                   
                   child: Image.asset("assets/images/sona.jpg"))),
-          DrawerListTile(
-              title: 'Home',
-              svgSrc: 'assets/icons/Dashboard.svg',
-              tap: () {
-                route:
-                HomeScreen.id;
-              }),
           DrawerListTile(
               title: 'Users',
               svgSrc: 'assets/icons/Subscribers.svg',
               tap: () {
-                route:
-                Users.id;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Users()),
+                );
               }),
           DrawerListTile(
-              title: 'Servers', svgSrc: 'assets/icons/Setting.svg', tap: () {}),
+              title: 'Servers',
+              svgSrc: 'assets/icons/Setting.svg',
+              tap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Servers()),
+                );
+              }),
           DrawerListTile(
-              title: 'Licenses', svgSrc: 'assets/icons/Pages.svg', tap: () {}),
+              title: 'Licenses',
+              svgSrc: 'assets/icons/Pages.svg',
+              tap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Licenses()),
+                );
+              }),
           DrawerListTile(
-              title: 'Statistics',
+              title: 'History',
               svgSrc: 'assets/icons/Statistics.svg',
-              tap: () {}),
+              tap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Statisics()),
+                );
+              }),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: appPadding * 2),
             child: Divider(
@@ -48,11 +64,20 @@ class DrawerMenu extends StatelessWidget {
             ),
           ),
           DrawerListTile(
-              title: 'Table de Synthèse',
+              title: 'Summary Table',
               svgSrc: 'assets/icons/Post.svg',
-              tap: () {}),
+              tap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SummaryTable()),
+                );
+              }),
           DrawerListTile(
-              title: 'Logout', svgSrc: 'assets/icons/Logout.svg', tap: () {}),
+              title: 'Logout',
+              svgSrc: 'assets/icons/Logout.svg',
+              tap: () {
+                Navigator.pop(context);
+              }),
         ],
       ),
     );
