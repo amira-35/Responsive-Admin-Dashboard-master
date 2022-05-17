@@ -1,7 +1,10 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 import 'package:responsive_admin_dashboard/screens/dashborad/dash_board_screen.dart';
 
+// ignore: must_be_immutable
 class HomeDesktop extends StatelessWidget {
   HomeDesktop({Key? key}) : super(key: key);
 
@@ -28,6 +31,7 @@ class HomeDesktop extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Expanded(
+                      
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: 18.0),
                         child: Column(

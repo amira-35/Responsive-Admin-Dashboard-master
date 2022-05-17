@@ -20,8 +20,11 @@ class DrawerMenu extends StatelessWidget {
               child: Container(
                   alignment: Alignment.topCenter,
                   child: Image.asset("assets/images/sona.jpg"))),
+          SizedBox(
+            height: 30.0,
+          ),
           DrawerListTile(
-              title: 'Users',
+              title: 'Gestion des Utilisateurs',
               svgSrc: 'assets/icons/Subscribers.svg',
               tap: () {
                 Navigator.push(
@@ -30,7 +33,7 @@ class DrawerMenu extends StatelessWidget {
                 );
               }),
           DrawerListTile(
-              title: 'Servers',
+              title: 'Gestions des Serveurs',
               svgSrc: 'assets/icons/Setting.svg',
               tap: () {
                 Navigator.push(
@@ -38,8 +41,24 @@ class DrawerMenu extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Servers()),
                 );
               }),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: appPadding * 2),
+            child: Divider(
+              color: grey,
+              thickness: 0.2,
+            ),
+          ),
           DrawerListTile(
-              title: 'History',
+              title: 'Diagramme en Batons',
+              svgSrc: 'assets/icons/Statistics.svg',
+              tap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Statisics()),
+                );
+              }),
+          DrawerListTile(
+              title: 'Diagramme en Cercle',
               svgSrc: 'assets/icons/Statistics.svg',
               tap: () {
                 Navigator.push(
@@ -55,7 +74,7 @@ class DrawerMenu extends StatelessWidget {
             ),
           ),
           DrawerListTile(
-              title: 'Summary Table',
+              title: 'Historique',
               svgSrc: 'assets/icons/Post.svg',
               tap: () {
                 Navigator.push(
@@ -64,7 +83,7 @@ class DrawerMenu extends StatelessWidget {
                 );
               }),
           DrawerListTile(
-              title: 'Logout',
+              title: 'Déconnexion',
               svgSrc: 'assets/icons/Logout.svg',
               tap: () {
                 Navigator.pop(context);

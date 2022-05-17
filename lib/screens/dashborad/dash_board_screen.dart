@@ -22,7 +22,7 @@ class DashBoardScreen extends StatelessWidget {
                 child: DrawerMenu(),
               ),
             Expanded(
-              flex: 5,
+              flex: 4,
               child: DashboardContent(),
             )
           ],
